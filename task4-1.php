@@ -38,7 +38,7 @@ class Rectangle
 
 	public function __construct( $w, $h )
     {
-		$this->width = $w;
+	$this->width = $w;
 		$this->height = $h;
 	}
 	
