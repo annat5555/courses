@@ -1,33 +1,32 @@
 <?php
 
-	class User
+class User
+{
+	public $surname; // прізвище
+	public $name; // ім'я
+	public $patronymic; // по батькові
+	public $age; // вік
+
+
+	public function __construct($sn, $n, $p, $a)
 	{
-		public $surname; // прізвище
-		public $name; // ім'я
-		public $patronymic; // по батькові
-		public $age; // вік
-	
-		
-		public function __construct($sn, $n, $p, $a)
-		{
-			$this->surname = $sn;
-			$this->name = $n;
-			$this->patronymic = $p;
-			$this->age = $a;
-			
-		}
-		public function getName()
-		{
-			return $this->name;
-		}
-		
-		public function getAge()
-		{
-			return $this->age;
-		}
+		$this->surname = $sn;
+		$this->name = $n;
+		$this->patronymic = $p;
+		$this->age = $a;
 	}
-	
-	
+	public function getName()
+	{
+		return $this->name;
+	}
+
+	public function getAge()
+	{
+		return $this->age;
+	}
+}
+
+
 $props = ["surname", "name", "patronymic"];
 $user = new User("Іванов", "Іван", "Іванович", 25);
 $props = ['surname', 'name', 'patronymic'];

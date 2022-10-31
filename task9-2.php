@@ -1,12 +1,12 @@
 <?php
 class City
-{	
+{
 	private $name;
 	private $foundation;
 	private $population;
-		
-	public $props = array( "name", "foundation", "population" );
-	
+
+	public $props = array("name", "foundation", "population");
+
 	public function __construct($n, $f, $p)
 	{
 		$this->name = $n;
@@ -19,12 +19,10 @@ class City
 		if (strcmp($pname, "foundation") == 0) return $this->foundation;
 		if (strcmp($pname, "population") == 0) return $this->salary;
 	}
-				
 }
 
-	
+
 $town = new City("Sumy", 1652, 264753); //First object
-foreach ($town->props as $pn)
-{
-	echo "Prop " . $pn . " = " . $town->getProp( $pn ) . "\n"; 
+foreach ($town->props as $pn) {
+	echo "Prop " . $pn . " = " . $town->getProp($pn) . "\n";
 }
